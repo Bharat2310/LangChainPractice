@@ -1,0 +1,14 @@
+from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint 
+# huggingface endpoints for api usage
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+llm = HuggingFaceEndpoint(
+    repo_id= "deepseek-ai/DeepSeek-V4-Pro",
+    task = "text-generation"
+)
+model = ChatHuggingFace(llm = llm)
+result = model.invoke("what is the capital of hjhvjhv")
+print(result.content, result.usage_metadata)
