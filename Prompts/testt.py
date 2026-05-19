@@ -1,0 +1,2 @@
+import huggingface_hub
+print(huggingface_hub.constants.HF_HUB_CACHE)
