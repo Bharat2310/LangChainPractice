@@ -5,9 +5,6 @@ from langchain_huggingface import ChatHuggingFace, HuggingFacePipeline
 
 load_dotenv()
 
-# Update your pipeline_kwargs to look something like this:
-
-
 llm = HuggingFacePipeline.from_model_id(
     model_id="google/gemma-2b-it",
     task="text-generation",
@@ -16,7 +13,7 @@ llm = HuggingFacePipeline.from_model_id(
     pipeline_kwargs=dict(
     temperature=0.5, 
     max_new_tokens=100, 
-    return_full_text=False  # This stops it from printing the prompt again
+    return_full_text=False  
 )
 )
 
