@@ -1,9 +1,10 @@
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai.embeddings import OpenAIEmbeddings
 from dotenv import load_dotenv
+from langchain_core.vectorstores import chroma
 
 load_dotenv()
-
+    
 text_splitter = SemanticChunker(
     OpenAIEmbeddings(), breakpoint_threshold_type="standard_deviation",
     breakpoint_threshold_amount=3
