@@ -33,7 +33,7 @@ splitter = RecursiveCharacterTextSplitter.from_language(
 )
 
 # Perform the split
-chunks = splitter.split_text(text)
+chunks = splitter.split_text(text11)
 
 print(len(chunks))
 print(chunks[1])
